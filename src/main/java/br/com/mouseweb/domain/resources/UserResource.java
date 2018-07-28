@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import br.com.mouseweb.domain.Post;
 import br.com.mouseweb.domain.User;
 import br.com.mouseweb.dto.UserDTO;
 import br.com.mouseweb.services.UserService;
