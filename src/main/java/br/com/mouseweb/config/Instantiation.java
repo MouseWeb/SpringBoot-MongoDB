@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 import br.com.mouseweb.domain.Post;
 import br.com.mouseweb.domain.User;
+import br.com.mouseweb.dto.AuthorDTO;
 import br.com.mouseweb.repository.PostRepository;
 import br.com.mouseweb.repository.UserRepository;
 
@@ -33,10 +34,11 @@ public class Instantiation implements CommandLineRunner {
 		User let = new User(null, "Leticia Martins", "let@gmail.com");
 		User bob = new User(null, "Bob Grey", "bob@gmail.com");
 		
-		Post p1 = new Post(null, sdf.parse("28/07/2018"), "Partiu Praia", "Irei viaja", dog);
-		Post p2 = new Post(null, sdf.parse("28/07/2018"), "Boa Noite", "Cheguei", let);
-
 		userRepository.saveAll(Arrays.asList(dog, let, bob));
+		
+		Post p1 = new Post(null, sdf.parse("28/07/2018"), "Partiu Praia", "Irei viaja", new AuthorDTO(dog));
+		Post p2 = new Post(null, sdf.parse("28/07/2018"), "Boa Noite", "Cheguei", new AuthorDTO(let));
+
 		postRepository.saveAll(Arrays.asList(p1, p2));
 		
 		
