@@ -1,6 +1,5 @@
 package br.com.mouseweb.config;
 
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
